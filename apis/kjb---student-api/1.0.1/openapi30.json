@@ -61,6 +61,16 @@
           },
           "example" : "201801"
         }, {
+          "name" : "firstName",
+          "in" : "query",
+          "description" : "Student First Name",
+          "schema" : {
+            "type" : "string",
+            "description" : "Student First Name",
+            "maxLength" : 50
+          },
+          "example" : "John"
+        }, {
           "name" : "applicantStatus",
           "in" : "query",
           "description" : "Student Applicant Status",
@@ -79,16 +89,6 @@
             "maxLength" : 50
           },
           "example" : "Jones"
-        }, {
-          "name" : "firstName",
-          "in" : "query",
-          "description" : "Student First Name",
-          "schema" : {
-            "type" : "string",
-            "description" : "Student First Name",
-            "maxLength" : 50
-          },
-          "example" : "John"
         } ],
         "responses" : {
           "200" : {
