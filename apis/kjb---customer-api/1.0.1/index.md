@@ -80,10 +80,10 @@ api-definition:
     baseUrls:
     - url: "http://127.0.0.1:8090/services/customer-api"
       description: "Ambiente de Desarrollo"
-      isPublished: true
+      isPublished: false
     - url: "http://replicate.attunitydemo.com:5070/services/customer-api"
       description: "Ambiente de Pruebas"
-      isPublished: true
+      isPublished: false
     unsortedElementOrder:
     - "#/contract/resources/394bf4ff-d348-4793-8446-474198927166"
     - "#/contract/resources/b039c360-084f-4385-a386-65ce67f20dfc"
@@ -543,22 +543,9 @@ api-tryin: |-
         "projectId" : "8d9eb274-ddb2-4aca-9c3d-0b6f8b518c5c"
       },
       "variables" : {
-        "fab77d4a-7194-404e-a92d-fabbcad44fd3" : {
+        "80ad6462-52cc-40a9-865e-af74bea2f406" : {
           "name" : "BaseUrl",
-          "value" : "http://127.0.0.1:8090/services/customer-api",
-          "enabled" : true,
-          "private" : false
-        }
-      }
-    }, {
-      "name" : "KJB - Customer API 1.0.1",
-      "importedFrom" : {
-        "projectId" : "8d9eb274-ddb2-4aca-9c3d-0b6f8b518c5c"
-      },
-      "variables" : {
-        "36db1997-4f5c-434d-9d15-94abf8df1d1a" : {
-          "name" : "BaseUrl",
-          "value" : "http://replicate.attunitydemo.com:5070/services/customer-api",
+          "value" : "https://example.com",
           "enabled" : true,
           "private" : false
         }

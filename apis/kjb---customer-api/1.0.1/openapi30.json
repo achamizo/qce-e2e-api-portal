@@ -14,13 +14,7 @@
     },
     "version" : "1.0.1"
   },
-  "servers" : [ {
-    "url" : "http://127.0.0.1:8090/services/customer-api",
-    "description" : "Ambiente de Desarrollo"
-  }, {
-    "url" : "http://replicate.attunitydemo.com:5070/services/customer-api",
-    "description" : "Ambiente de Pruebas"
-  } ],
+  "servers" : [ ],
   "security" : [ ],
   "paths" : {
     "/customer/{id}/" : {
