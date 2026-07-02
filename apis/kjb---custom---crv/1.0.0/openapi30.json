@@ -3,6 +3,7 @@
   "info" : {
     "title" : "KJB - Custom - CRV",
     "description" : "No description",
+    "contact" : { },
     "version" : "1.0.0"
   },
   "servers" : [ {

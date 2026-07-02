@@ -7,23 +7,24 @@ api-definition:
     name: "KJB - Custom - CRV"
     version: "1.0.0"
     description: "No description"
+    contact: {}
   contract:
     baseUrls:
     - url: "http://localhost:8042/services/crv_api"
       isPublished: true
     unsortedElementOrder:
-    - "#/contract/resources/e30341d1-7176-4460-97dc-1627c1dacbe0"
-    - "#/contract/resources/942ffa1c-9488-40de-8577-51136bba753a"
-    - "#/contract/types/30be5cdd-1650-451d-830b-c4692db488fa"
+    - "#/contract/resources/2f58fa59-2e39-440d-b794-5ccb42ff6999"
+    - "#/contract/resources/668e3fe8-d63c-45e7-aacc-5676999bee13"
+    - "#/contract/types/c61e2325-b38f-413e-bfc6-c6ce34b0ffec"
     resources:
-      e30341d1-7176-4460-97dc-1627c1dacbe0:
+      "2f58fa59-2e39-440d-b794-5ccb42ff6999":
         path: "/invoice/{id}"
         pathVariables:
         - name: "id"
           type: "STRING"
           required: true
         operations:
-          "9b136af2-e41b-42f7-a28f-b726255ca496":
+          "4e867493-a140-4d0b-b7f2-d6164e3359f2":
             name: "GetInvoiceInfo"
             method: "GET"
             description: "Obtener información de una factura específica. Esta API recibe como parámetro el **id** de la factura y devuelve el detalle de la misma."
@@ -32,14 +33,14 @@ api-definition:
             - "API"
             - "REST"
             responses:
-              "4b166397-c0c8-4ef4-a205-f59c0556b9d8":
+              "39f10ceb-c76e-4793-970b-d5d12a209aa3":
                 status: "200"
                 description: "Estatus 200 si la factura es encontrada"
                 bodies:
-                - type: "#/contract/types/30be5cdd-1650-451d-830b-c4692db488fa"
+                - type: "#/contract/types/c61e2325-b38f-413e-bfc6-c6ce34b0ffec"
                   mediaTypes:
                   - "application/json"
-              "186e6214-78d2-4a20-b78b-bf9e9196c1ab":
+              e846fdd8-06a0-4eff-8f80-113dfcaa2994:
                 status: "404"
                 description: "Invoice Not Found"
                 bodies:
@@ -53,10 +54,10 @@ api-definition:
                       }
                   mediaTypes:
                   - "application/json"
-      "942ffa1c-9488-40de-8577-51136bba753a":
+      "668e3fe8-d63c-45e7-aacc-5676999bee13":
         path: "/invoice"
         operations:
-          "324c4bb6-6f11-419a-a1b7-0b6c1e2066ab":
+          dc22844c-9170-4de0-a0d8-728935bf5d32:
             name: "GetSupplierInvoices"
             method: "GET"
             tags:
@@ -81,11 +82,11 @@ api-definition:
               examples:
               - value: "2025-01-31"
             responses:
-              ba8a33a2-7185-43a1-a7da-b2b0aab11114:
+              b025980c-77c1-4489-a0f7-94b681a13468:
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/30be5cdd-1650-451d-830b-c4692db488fa"
+                - type: "#/contract/types/c61e2325-b38f-413e-bfc6-c6ce34b0ffec"
                   examples:
                   - value: |-
                       {
@@ -125,7 +126,7 @@ api-definition:
                   mediaTypes:
                   - "application/json"
     types:
-      "30be5cdd-1650-451d-830b-c4692db488fa":
+      c61e2325-b38f-413e-bfc6-c6ce34b0ffec:
         name: "Invoice_JSON"
         type: "OBJECT"
         description: "Invoice JSON Structure"
@@ -210,12 +211,12 @@ api-tryin: |-
         "type" : "Project",
         "name" : "KJB - Custom - CRV 1.0.0",
         "description" : "No description",
-        "importedFrom" : "9fe81817-863e-46b0-a32f-19875b10f407"
+        "importedFrom" : "0a41c1b0-3fb1-47ee-9a7b-2cccb8d644dd"
       },
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "9b136af2-e41b-42f7-a28f-b726255ca496",
+          "id" : "4e867493-a140-4d0b-b7f2-d6164e3359f2",
           "name" : "GetInvoiceInfo",
           "description" : "Obtener información de una factura específica. Esta API recibe como parámetro el **id** de la factura y devuelve el detalle de la misma.",
           "uri" : {
@@ -236,7 +237,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "324c4bb6-6f11-419a-a1b7-0b6c1e2066ab",
+          "id" : "dc22844c-9170-4de0-a0d8-728935bf5d32",
           "name" : "GetSupplierInvoices",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
@@ -275,10 +276,10 @@ api-tryin: |-
     "environments" : [ {
       "name" : "KJB - Custom - CRV 1.0.0",
       "importedFrom" : {
-        "projectId" : "9fe81817-863e-46b0-a32f-19875b10f407"
+        "projectId" : "0a41c1b0-3fb1-47ee-9a7b-2cccb8d644dd"
       },
       "variables" : {
-        "74177fe5-81f5-4ecb-a46e-7d86ab3e7de8" : {
+        "80b8b60b-dc91-46b9-adb4-e56b242a9b51" : {
           "name" : "BaseUrl",
           "value" : "http://localhost:8042/services/crv_api",
           "enabled" : true,

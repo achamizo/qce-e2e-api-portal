@@ -3,7 +3,8 @@
   "info" : {
     "description" : "No description",
     "version" : "1.0.0",
-    "title" : "KJB - Custom - CRV"
+    "title" : "KJB - Custom - CRV",
+    "contact" : { }
   },
   "host" : "localhost:8042",
   "basePath" : "/services/crv_api",
