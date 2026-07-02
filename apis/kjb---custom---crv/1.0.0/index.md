@@ -279,7 +279,7 @@ api-tryin: |-
         "projectId" : "0a41c1b0-3fb1-47ee-9a7b-2cccb8d644dd"
       },
       "variables" : {
-        "80b8b60b-dc91-46b9-adb4-e56b242a9b51" : {
+        "1037a744-331b-4420-a8d0-6492184e6f25" : {
           "name" : "BaseUrl",
           "value" : "http://localhost:8042/services/crv_api",
           "enabled" : true,
