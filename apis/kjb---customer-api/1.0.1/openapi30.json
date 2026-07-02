@@ -89,6 +89,16 @@
           },
           "example" : "201801"
         }, {
+          "name" : "firstName",
+          "in" : "query",
+          "description" : "Customer First Name",
+          "schema" : {
+            "type" : "string",
+            "description" : "Customer First Name",
+            "maxLength" : 50
+          },
+          "example" : "John"
+        }, {
           "name" : "applicantStatus",
           "in" : "query",
           "description" : "Customer Applicant Status",
@@ -107,16 +117,6 @@
             "maxLength" : 50
           },
           "example" : "Jones"
-        }, {
-          "name" : "firstName",
-          "in" : "query",
-          "description" : "Customer First Name",
-          "schema" : {
-            "type" : "string",
-            "description" : "Customer First Name",
-            "maxLength" : 50
-          },
-          "example" : "John"
         } ],
         "responses" : {
           "200" : {

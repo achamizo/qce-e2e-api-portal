@@ -81,6 +81,14 @@
           "maxLength" : 6,
           "x-example" : "201801"
         }, {
+          "name" : "firstName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "description" : "Customer First Name",
+          "maxLength" : 50,
+          "x-example" : "John"
+        }, {
           "name" : "applicantStatus",
           "in" : "query",
           "required" : false,
@@ -95,14 +103,6 @@
           "description" : "Customer Last Name",
           "maxLength" : 50,
           "x-example" : "Jones"
-        }, {
-          "name" : "firstName",
-          "in" : "query",
-          "required" : false,
-          "type" : "string",
-          "description" : "Customer First Name",
-          "maxLength" : 50,
-          "x-example" : "John"
         } ],
         "responses" : {
           "200" : {
