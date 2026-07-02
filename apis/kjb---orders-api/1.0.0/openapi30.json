@@ -1,0 +1,195 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "KJB - Orders API",
+    "description" : "No description",
+    "contact" : { },
+    "version" : "1.0.0"
+  },
+  "paths" : {
+    "/northwind/orders/{id}/" : {
+      "get" : {
+        "summary" : "Get Order by ID",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Orders_JSON"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Status 404",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Fault"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "summary" : "Delete Order",
+        "responses" : {
+          "202" : {
+            "description" : "Status 202"
+          }
+        }
+      },
+      "parameters" : [ {
+        "name" : "id",
+        "in" : "path",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/northwind/orders/" : {
+      "put" : {
+        "summary" : "Put Order",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Orders_JSON"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "500" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object"
+                },
+                "example" : "{\n  \"fault\": {\n    \"orderId\": \"10247\",\n    \"errorCode\": \"500\",\n    \"errorMessage\": \"Exception: ...\"\n    }\n}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/northwind/orders/bulk/" : {
+      "put" : {
+        "summary" : "Put Orders BULK",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Orders_JSON"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "500" : {
+            "description" : "Status 500",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object"
+                },
+                "example" : "{\n  \"faults\": {\n    \"rejectedCount\": \"8\",\n    \"fault\": {\n      \"errorCode\": \"500\",\n      \"errorMessage\": \"Exception: ...\"\n    }\n  }\n}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Fault" : {
+        "type" : "object",
+        "properties" : {
+          "fault" : {
+            "type" : "object",
+            "properties" : {
+              "message" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "example" : "{\n    \"fault\": {\n        \"message\": \"Could not find order ID: '10242'\"\n    }\n}"
+      },
+      "Orders_JSON" : {
+        "type" : "object",
+        "properties" : {
+          "order" : {
+            "type" : "object",
+            "properties" : {
+              "id" : {
+                "type" : "number"
+              },
+              "cust_id" : {
+                "type" : "string"
+              },
+              "emp_id" : {
+                "type" : "number"
+              },
+              "order_dt" : {
+                "type" : "string"
+              },
+              "required_dt" : {
+                "type" : "string"
+              },
+              "shipping" : {
+                "type" : "object",
+                "properties" : {
+                  "ship_dt" : {
+                    "type" : "string"
+                  },
+                  "ship_via" : {
+                    "type" : "number"
+                  },
+                  "freight" : {
+                    "type" : "number"
+                  },
+                  "ship_name" : {
+                    "type" : "string"
+                  },
+                  "address" : {
+                    "type" : "object",
+                    "properties" : {
+                      "line_1" : {
+                        "type" : "string"
+                      },
+                      "line_2" : {
+                        "type" : "string"
+                      },
+                      "city" : {
+                        "type" : "string"
+                      },
+                      "postal_code" : {
+                        "type" : "number"
+                      },
+                      "region" : {
+                        "type" : "string"
+                      },
+                      "country" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "example" : "{\r\n    \"order\": {\r\n        \"id\": 10249,\r\n        \"cust_id\": \"TOMSP\",\r\n        \"emp_id\": 6,\r\n        \"order_dt\": \"05-07-2021\",\r\n        \"required_dt\": \"16-08-2021\",\r\n        \"shipping\": {\r\n            \"ship_dt\": \"10-07-2021\",\r\n            \"ship_via\": 1,\r\n            \"freight\": 11.61,\r\n            \"ship_name\": \"Toms Spezialit-ten\",\r\n            \"address\": {\r\n                \"line_1\": \"Luisenstr. 48\",\r\n                \"line_2\": \"\",\r\n                \"city\": \"M-nster\",\r\n                \"postal_code\": 44087,\r\n                \"region\": \"\",\r\n                \"country\": \"Germany\"\r\n            }\r\n        }\r\n    }\r\n}\r\n"
+      }
+    }
+  }
+}
