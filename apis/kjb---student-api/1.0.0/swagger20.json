@@ -1,6 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
+    "description" : "First Version",
     "version" : "1.0.0",
     "title" : "KJB - Student API"
   },

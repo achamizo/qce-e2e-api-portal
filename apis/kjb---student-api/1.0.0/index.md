@@ -6,6 +6,7 @@ api-definition:
   info:
     name: "KJB - Student API"
     version: "1.0.0"
+    description: "First Version"
   contract:
     baseUrls:
     - url: "https://lp1uhp3.us.api-mocks.com"
@@ -213,6 +214,7 @@ api-tryin: |-
       "entity" : {
         "type" : "Project",
         "name" : "KJB - Student API 1.0.0",
+        "description" : "First Version",
         "importedFrom" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "children" : [ {
@@ -328,7 +330,7 @@ api-tryin: |-
         "projectId" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "variables" : {
-        "ae292d52-8539-4dbf-861d-890eceb531af" : {
+        "05b0018e-ff44-40be-b75c-d2a4addaa840" : {
           "name" : "BaseUrl",
           "value" : "https://lp1uhp3.us.api-mocks.com",
           "enabled" : true,
@@ -341,7 +343,7 @@ api-tryin: |-
         "projectId" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "variables" : {
-        "c525404c-f5ed-457f-8f91-72c0acb6b7cf" : {
+        "37aa1844-39e7-4860-a63c-a2aaaeed0bac" : {
           "name" : "BaseUrl",
           "value" : "http://tal-bhough5520:8040/services/student-api",
           "enabled" : true,
