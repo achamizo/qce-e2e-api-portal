@@ -50,16 +50,6 @@
       "get" : {
         "summary" : "Get Students",
         "parameters" : [ {
-          "name" : "lastName",
-          "in" : "query",
-          "description" : "Student Last Name",
-          "schema" : {
-            "type" : "string",
-            "description" : "Student Last Name",
-            "maxLength" : 50
-          },
-          "example" : "Jones"
-        }, {
           "name" : "entryTerm",
           "in" : "query",
           "description" : "Student Entry Term",
@@ -71,15 +61,6 @@
           },
           "example" : "201801"
         }, {
-          "name" : "applicantStatus",
-          "in" : "query",
-          "description" : "Student Applicant Status",
-          "schema" : {
-            "type" : "string",
-            "description" : "Student Applicant Status",
-            "enum" : [ "accepted", "denied", "withdraw", "enrolled" ]
-          }
-        }, {
           "name" : "firstName",
           "in" : "query",
           "description" : "Student First Name",
@@ -89,6 +70,25 @@
             "maxLength" : 50
           },
           "example" : "John"
+        }, {
+          "name" : "applicantStatus",
+          "in" : "query",
+          "description" : "Student Applicant Status",
+          "schema" : {
+            "type" : "string",
+            "description" : "Student Applicant Status",
+            "enum" : [ "accepted", "denied", "withdraw", "enrolled" ]
+          }
+        }, {
+          "name" : "lastName",
+          "in" : "query",
+          "description" : "Student Last Name",
+          "schema" : {
+            "type" : "string",
+            "description" : "Student Last Name",
+            "maxLength" : 50
+          },
+          "example" : "Jones"
         } ],
         "responses" : {
           "200" : {

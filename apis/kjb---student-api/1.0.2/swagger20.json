@@ -47,14 +47,6 @@
         "summary" : "Get Students",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "lastName",
-          "in" : "query",
-          "required" : false,
-          "type" : "string",
-          "description" : "Student Last Name",
-          "maxLength" : 50,
-          "x-example" : "Jones"
-        }, {
           "name" : "entryTerm",
           "in" : "query",
           "required" : false,
@@ -64,13 +56,6 @@
           "maxLength" : 6,
           "x-example" : "201801"
         }, {
-          "name" : "applicantStatus",
-          "in" : "query",
-          "required" : false,
-          "type" : "string",
-          "description" : "Student Applicant Status",
-          "enum" : [ "accepted", "denied", "withdraw", "enrolled" ]
-        }, {
           "name" : "firstName",
           "in" : "query",
           "required" : false,
@@ -78,6 +63,21 @@
           "description" : "Student First Name",
           "maxLength" : 50,
           "x-example" : "John"
+        }, {
+          "name" : "applicantStatus",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "description" : "Student Applicant Status",
+          "enum" : [ "accepted", "denied", "withdraw", "enrolled" ]
+        }, {
+          "name" : "lastName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "description" : "Student Last Name",
+          "maxLength" : 50,
+          "x-example" : "Jones"
         } ],
         "responses" : {
           "200" : {
