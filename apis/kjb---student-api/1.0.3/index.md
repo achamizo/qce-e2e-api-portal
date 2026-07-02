@@ -319,7 +319,7 @@ api-tryin: |-
         "projectId" : "638cf589-437f-4b1e-ad7b-9477ba69e335"
       },
       "variables" : {
-        "8fc6172a-985f-48e2-92fe-85b20b0708b1" : {
+        "ec92c164-32ad-48a1-8706-e5bf7ecaf9bc" : {
           "name" : "BaseUrl",
           "value" : "http://localhost:8042/services/student-api",
           "enabled" : true,
