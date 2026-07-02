@@ -2,8 +2,6 @@
   "openapi" : "3.0.1",
   "info" : {
     "title" : "KJB - Student API",
-    "description" : "This is the offical API for trusted Student data at our institution.",
-    "contact" : { },
     "version" : "1.0.0"
   },
   "servers" : [ {

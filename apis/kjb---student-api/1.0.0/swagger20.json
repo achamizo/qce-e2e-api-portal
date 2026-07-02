@@ -1,10 +1,8 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "This is the offical API for trusted Student data at our institution.",
     "version" : "1.0.0",
-    "title" : "KJB - Student API",
-    "contact" : { }
+    "title" : "KJB - Student API"
   },
   "host" : "lp1uhp3.us.api-mocks.com",
   "schemes" : [ "https" ],

@@ -6,8 +6,6 @@ api-definition:
   info:
     name: "KJB - Student API"
     version: "1.0.0"
-    description: "This is the offical API for trusted Student data at our institution."
-    contact: {}
   contract:
     baseUrls:
     - url: "https://lp1uhp3.us.api-mocks.com"
@@ -17,44 +15,44 @@ api-definition:
       description: "Demo Environment"
       isPublished: true
     unsortedElementOrder:
-    - "#/contract/resources/f055f7dd-f057-4889-b2d6-56edbe75010b"
-    - "#/contract/resources/d5581043-6fcb-4dd3-a16d-43f7b4a68013"
-    - "#/contract/types/f235080a-ad54-4462-a4e6-46cfe755c50d"
-    - "#/contract/types/c7d2d295-77cd-40a0-8040-b9c4884b0232"
+    - "#/contract/resources/0e5bb39a-7c65-487c-bfd0-e511e1bf8772"
+    - "#/contract/resources/00b5b8fa-8e29-41f4-bd91-df87670f0015"
+    - "#/contract/types/acc15045-a9e9-413e-bff7-b2af4907883e"
+    - "#/contract/types/da8b7cdd-a822-4dca-a725-4c3a10e7942b"
     resources:
-      f055f7dd-f057-4889-b2d6-56edbe75010b:
+      "0e5bb39a-7c65-487c-bfd0-e511e1bf8772":
         path: "/student/{id}/"
         pathVariables:
         - name: "id"
           type: "STRING"
           required: true
         operations:
-          "1aad8d54-ffdb-4184-baf0-8c8f806077f5":
+          "280e686b-5769-49b5-a9e3-2811c0ffce9c":
             name: "Get by Student ID"
             method: "GET"
             description: |-
               Get Students using the Student ID
               _IbR7VOeQ-WbSw4qwMTJVXiPDASdY29NthZRLcc8wsLz6QVdJbessomjA8yLLNZ3
             responses:
-              "9b8f8340-2d3b-4ea3-bff5-9def370afabd":
+              e5c87048-6057-450c-9a00-41cf6d92e966:
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/c7d2d295-77cd-40a0-8040-b9c4884b0232"
+                - type: "#/contract/types/da8b7cdd-a822-4dca-a725-4c3a10e7942b"
                   mediaTypes:
                   - "application/json"
-          bcba21bc-5c5a-4167-a32d-c0648d47e266:
+          a91e0b07-dc1e-43a4-847b-08733a8a7dd9:
             name: "Delete Student"
             method: "DELETE"
             description: "Delete the student by ID"
             responses:
-              f9ae43a1-f6b4-491f-92eb-5f17e1525150:
+              ead418bd-45aa-4568-8459-ac5bd029ba57:
                 status: "202"
                 description: "Status 202"
-      d5581043-6fcb-4dd3-a16d-43f7b4a68013:
+      "00b5b8fa-8e29-41f4-bd91-df87670f0015":
         path: "/student/"
         operations:
-          "5fe40feb-6b5f-49b3-97c9-43d31a0f391a":
+          ff7fe77c-9303-43fd-b26e-79c627ee5938:
             name: "Get Students"
             method: "GET"
             description: "Operation to get a list of students which can be filtered by: \n* First Name\n* Last Name\n* Status,\n* Entry Term"
@@ -92,22 +90,22 @@ api-definition:
               examples:
               - value: "John"
             responses:
-              "7aaeffcb-db5e-4051-b3c2-c55aea9949a7":
+              "53cb139c-164a-4f67-91c1-cf6e96f44202":
                 status: "200"
                 description: "Status 200"
                 bodies:
                 - type: "ARRAY"
                   items:
-                    type: "#/contract/types/c7d2d295-77cd-40a0-8040-b9c4884b0232"
+                    type: "#/contract/types/da8b7cdd-a822-4dca-a725-4c3a10e7942b"
                   examples:
                   - value: "{  \n   \"student\":[  \n      {  \n         \"studentId\":145003,\n         \"firstName\":\"Benjamin\",\n         \"middleName\":\"Woodrow\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"withdraw\",\n         \"entryTerm\":201702,\n         \"address\":\"539 Cleveland Ave.\",\n         \"city\":\"Helena\",\n         \"state\":\"Mississippi\",\n         \"zip\":3657\n      },\n      {  \n         \"studentId\":145013,\n         \"firstName\":\"Andrew\",\n         \"middleName\":\"Warren\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"accepted\",\n         \"entryTerm\":201701,\n         \"address\":\"1229 Bailard Avenue\",\n         \"city\":\"Trenton\",\n         \"state\":\"South Carolina\",\n         \"zip\":63959\n      },\n      {  \n         \"studentId\":145091,\n         \"firstName\":\"Millard\",\n         \"middleName\":\"Richard\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"enrolled\",\n         \"entryTerm\":201701,\n         \"address\":\"1090 Carpinteria North\",\n         \"city\":\"Providence\",\n         \"state\":\"Maine\",\n         \"zip\":57472\n      }\n   ]\n}"
                   mediaTypes:
                   - "application/json"
-          bade2b95-96c3-4026-98cb-8ea415d3bef9:
+          "6a5b02a8-4b44-443e-bb48-ba0bb1c0c0cd":
             name: "Add a new Student"
             method: "POST"
             bodies:
-            - type: "#/contract/types/c7d2d295-77cd-40a0-8040-b9c4884b0232"
+            - type: "#/contract/types/da8b7cdd-a822-4dca-a725-4c3a10e7942b"
               examples:
               - value: |-
                   {
@@ -127,11 +125,11 @@ api-definition:
               mediaTypes:
               - "application/json"
             responses:
-              fbf549c2-0aac-4a4c-95dd-7d8bdd732174:
+              ba49af60-3231-4e53-814a-e1bd7daab0de:
                 status: "200"
                 description: "Status 200"
     types:
-      f235080a-ad54-4462-a4e6-46cfe755c50d:
+      acc15045-a9e9-413e-bff7-b2af4907883e:
         name: "applicantStatus"
         type: "STRING"
         description: "The Student Applicant Status"
@@ -140,7 +138,7 @@ api-definition:
         - "denied"
         - "withdraw"
         - "enrolled"
-      c7d2d295-77cd-40a0-8040-b9c4884b0232:
+      da8b7cdd-a822-4dca-a725-4c3a10e7942b:
         name: "Student_JSON"
         type: "OBJECT"
         description: "Student JSON Structure"
@@ -180,7 +178,7 @@ api-definition:
             type: "STRING"
             maxLength: 50
           - name: "applicantStatus"
-            type: "#/contract/types/f235080a-ad54-4462-a4e6-46cfe755c50d"
+            type: "#/contract/types/acc15045-a9e9-413e-bff7-b2af4907883e"
         examples:
         - value: |-
             {
@@ -199,7 +197,7 @@ api-definition:
             }
   components:
     pathVariables:
-      fee3970b-fdfe-44a1-8e33-e025e2aac5ae:
+      "99fe6688-8c25-495c-a1d7-1f60cefa64e2":
         name: "studentId"
         componentName: "studentId"
         type: "INTEGER"
@@ -215,13 +213,12 @@ api-tryin: |-
       "entity" : {
         "type" : "Project",
         "name" : "KJB - Student API 1.0.0",
-        "description" : "This is the offical API for trusted Student data at our institution.",
-        "importedFrom" : "d7d4897b-ca68-453f-8cae-bc73d3587426"
+        "importedFrom" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "1aad8d54-ffdb-4184-baf0-8c8f806077f5",
+          "id" : "280e686b-5769-49b5-a9e3-2811c0ffce9c",
           "name" : "Get by Student ID",
           "description" : "Get Students using the Student ID\n_IbR7VOeQ-WbSw4qwMTJVXiPDASdY29NthZRLcc8wsLz6QVdJbessomjA8yLLNZ3",
           "uri" : {
@@ -242,7 +239,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "bcba21bc-5c5a-4167-a32d-c0648d47e266",
+          "id" : "a91e0b07-dc1e-43a4-847b-08733a8a7dd9",
           "name" : "Delete Student",
           "description" : "Delete the student by ID",
           "uri" : {
@@ -259,7 +256,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "5fe40feb-6b5f-49b3-97c9-43d31a0f391a",
+          "id" : "ff7fe77c-9303-43fd-b26e-79c627ee5938",
           "name" : "Get Students",
           "description" : "Operation to get a list of students which can be filtered by: \n* First Name\n* Last Name\n* Status,\n* Entry Term",
           "uri" : {
@@ -301,7 +298,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "bade2b95-96c3-4026-98cb-8ea415d3bef9",
+          "id" : "6a5b02a8-4b44-443e-bb48-ba0bb1c0c0cd",
           "name" : "Add a new Student",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
@@ -328,10 +325,10 @@ api-tryin: |-
     "environments" : [ {
       "name" : "KJB - Student API 1.0.0",
       "importedFrom" : {
-        "projectId" : "d7d4897b-ca68-453f-8cae-bc73d3587426"
+        "projectId" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "variables" : {
-        "5c612f53-6d21-4e7d-aeda-e9b5475685d4" : {
+        "cc944b13-a494-4ff3-ba5b-3ce4dc168dfc" : {
           "name" : "BaseUrl",
           "value" : "https://lp1uhp3.us.api-mocks.com",
           "enabled" : true,
@@ -341,10 +338,10 @@ api-tryin: |-
     }, {
       "name" : "KJB - Student API 1.0.0",
       "importedFrom" : {
-        "projectId" : "d7d4897b-ca68-453f-8cae-bc73d3587426"
+        "projectId" : "b423455e-3b1b-4268-ba20-2292565e2f45"
       },
       "variables" : {
-        "d0e84211-3f32-4928-af0a-99e88678cf7a" : {
+        "a0e0504e-9ace-4784-be3a-2f7d603cbf15" : {
           "name" : "BaseUrl",
           "value" : "http://tal-bhough5520:8040/services/student-api",
           "enabled" : true,
