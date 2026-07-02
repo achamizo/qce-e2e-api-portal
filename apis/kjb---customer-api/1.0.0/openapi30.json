@@ -52,6 +52,16 @@
         "summary" : "Get Customers",
         "description" : "Operacion que permite obtener la lista de clientes",
         "parameters" : [ {
+          "name" : "lastName",
+          "in" : "query",
+          "description" : "Customer Last Name",
+          "schema" : {
+            "type" : "string",
+            "description" : "Customer Last Name",
+            "maxLength" : 50
+          },
+          "example" : "Jones"
+        }, {
           "name" : "entryTerm",
           "in" : "query",
           "description" : "Customer Entry Term",
@@ -71,16 +81,6 @@
             "description" : "Customer Applicant Status",
             "enum" : [ "accepted", "denied", "withdraw", "enrolled" ]
           }
-        }, {
-          "name" : "lastName",
-          "in" : "query",
-          "description" : "Customer Last Name",
-          "schema" : {
-            "type" : "string",
-            "description" : "Customer Last Name",
-            "maxLength" : 50
-          },
-          "example" : "Jones"
         }, {
           "name" : "firstName",
           "in" : "query",

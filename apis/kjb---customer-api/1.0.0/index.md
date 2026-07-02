@@ -14,42 +14,42 @@ api-definition:
       description: "Demo Environment"
       isPublished: true
     unsortedElementOrder:
-    - "#/contract/resources/4960e9cc-e5c3-47bd-9046-8d3e200a0242"
-    - "#/contract/resources/bcea6923-9a8e-4bf5-85ab-03a3efb7e94c"
-    - "#/contract/types/246be633-595b-4896-942f-ed1332fbd17a"
-    - "#/contract/types/d24a7452-4fc9-47ce-b8df-47fed249ea82"
+    - "#/contract/resources/ffc44d13-4543-49a3-b718-fa22bbd16b25"
+    - "#/contract/resources/cbc5ee2b-be81-429d-b996-5a627e1849e6"
+    - "#/contract/types/22a052d0-5125-4a7f-a659-8106421aa7d2"
+    - "#/contract/types/803569cb-e628-4c66-bcc7-db92cda749c0"
     resources:
-      "4960e9cc-e5c3-47bd-9046-8d3e200a0242":
+      ffc44d13-4543-49a3-b718-fa22bbd16b25:
         path: "/customer/{id}/"
         pathVariables:
         - name: "id"
           type: "STRING"
           required: true
         operations:
-          b4c39269-4ad0-4b62-b367-b1b2b1042759:
+          "2bb10e27-b7fe-4fa3-b5e5-fdcb858f120f":
             name: "Get by Customer ID"
             method: "GET"
             description: "Get Customer using the Customer ID"
             responses:
-              "10d95a21-8844-430b-905d-7a7cd0c96e0c":
+              ddf4bfbf-3bb8-4e48-943d-b5d6fb0fc877:
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/d24a7452-4fc9-47ce-b8df-47fed249ea82"
+                - type: "#/contract/types/803569cb-e628-4c66-bcc7-db92cda749c0"
                   mediaTypes:
                   - "application/json"
-          "32cbae0c-5d0f-49d2-825c-c2d8c6134467":
+          "04334aaf-7036-4dec-ae9f-1bc1a877e679":
             name: "Delete Customer"
             method: "DELETE"
             description: "Delete the Customer by ID"
             responses:
-              b3b7420a-e476-4a33-8df5-25aaf38a1176:
+              "642353bf-0514-4b6c-bddf-47aaaf683040":
                 status: "202"
                 description: "Status 202"
-      bcea6923-9a8e-4bf5-85ab-03a3efb7e94c:
+      cbc5ee2b-be81-429d-b996-5a627e1849e6:
         path: "/customer/"
         operations:
-          "08f93165-b0b9-4648-8e6c-aae1f991c181":
+          c6b6731f-a5e4-41af-9687-690affc946c7:
             name: "Get Customers"
             method: "GET"
             description: "Operacion que permite obtener la lista de clientes"
@@ -57,6 +57,12 @@ api-definition:
             - "Qlik"
             - "Demo"
             queryParameters:
+            - name: "lastName"
+              type: "STRING"
+              description: "Customer Last Name"
+              maxLength: 50
+              examples:
+              - value: "Jones"
             - name: "entryTerm"
               type: "STRING"
               description: "Customer Entry Term"
@@ -72,12 +78,6 @@ api-definition:
               - "denied"
               - "withdraw"
               - "enrolled"
-            - name: "lastName"
-              type: "STRING"
-              description: "Customer Last Name"
-              maxLength: 50
-              examples:
-              - value: "Jones"
             - name: "firstName"
               type: "STRING"
               description: "Customer First Name"
@@ -85,22 +85,22 @@ api-definition:
               examples:
               - value: "John"
             responses:
-              b0771ae8-1186-4621-a6c4-93a5da765e52:
+              "1037b846-7a78-4b24-98a2-32e0320680a2":
                 status: "200"
                 description: "Status 200"
                 bodies:
                 - type: "ARRAY"
                   items:
-                    type: "#/contract/types/d24a7452-4fc9-47ce-b8df-47fed249ea82"
+                    type: "#/contract/types/803569cb-e628-4c66-bcc7-db92cda749c0"
                   examples:
                   - value: "{  \n   \"customer\":[  \n      {  \n         \"customerId\":145003,\n         \"firstName\":\"Benjamin\",\n         \"middleName\":\"Woodrow\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"withdraw\",\n         \"entryTerm\":201702,\n         \"address\":\"539 Cleveland Ave.\",\n         \"city\":\"Helena\",\n         \"state\":\"Mississippi\",\n         \"zip\":3657\n      },\n      {  \n         \"customerId\":145013,\n         \"firstName\":\"Andrew\",\n         \"middleName\":\"Warren\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"accepted\",\n         \"entryTerm\":201701,\n         \"address\":\"1229 Bailard Avenue\",\n         \"city\":\"Trenton\",\n         \"state\":\"South Carolina\",\n         \"zip\":63959\n      },\n      {  \n         \"customerId\":145091,\n         \"firstName\":\"Millard\",\n         \"middleName\":\"Richard\",\n         \"lastName\":\"Fillmore\",\n         \"applicantStatus\":\"enrolled\",\n         \"entryTerm\":201701,\n         \"address\":\"1090 Carpinteria North\",\n         \"city\":\"Providence\",\n         \"state\":\"Maine\",\n         \"zip\":57472\n      }\n   ]\n}"
                   mediaTypes:
                   - "application/json"
-          "5137ae77-df48-4060-8ba3-bfede7e25a2e":
+          "1a372998-63c7-4700-a580-56dc1b871453":
             name: "Add a new Customer"
             method: "POST"
             bodies:
-            - type: "#/contract/types/d24a7452-4fc9-47ce-b8df-47fed249ea82"
+            - type: "#/contract/types/803569cb-e628-4c66-bcc7-db92cda749c0"
               examples:
               - value: |-
                   {
@@ -120,11 +120,11 @@ api-definition:
               mediaTypes:
               - "application/json"
             responses:
-              "0ca2de95-2b0c-4b7e-9f8f-d54a212dbb2e":
+              "2fb0b0f9-f9d6-453d-ab53-b2bc343b70ec":
                 status: "200"
                 description: "Status 200"
     types:
-      "246be633-595b-4896-942f-ed1332fbd17a":
+      "22a052d0-5125-4a7f-a659-8106421aa7d2":
         name: "applicantStatus"
         type: "STRING"
         description: "The Student Applicant Status"
@@ -133,7 +133,7 @@ api-definition:
         - "denied"
         - "withdraw"
         - "enrolled"
-      d24a7452-4fc9-47ce-b8df-47fed249ea82:
+      "803569cb-e628-4c66-bcc7-db92cda749c0":
         name: "Customer_JSON"
         type: "OBJECT"
         description: "Customer JSON Structure"
@@ -173,7 +173,7 @@ api-definition:
             type: "STRING"
             maxLength: 50
           - name: "applicantStatus"
-            type: "#/contract/types/246be633-595b-4896-942f-ed1332fbd17a"
+            type: "#/contract/types/22a052d0-5125-4a7f-a659-8106421aa7d2"
         examples:
         - value: |-
             {
@@ -192,7 +192,7 @@ api-definition:
             }
   components:
     pathVariables:
-      "1720e8b8-4a09-45a6-88d9-1124bb007459":
+      "3bd6813f-3fae-4441-9eb4-a606a8f46fff":
         name: "studentId"
         componentName: "studentId"
         type: "INTEGER"
@@ -209,12 +209,12 @@ api-tryin: |-
         "type" : "Project",
         "name" : "KJB - Customer API 1.0.0",
         "description" : "This is the offical API for trusted Customer data at our organization.",
-        "importedFrom" : "d3a99601-64c6-4884-b03b-9df96c358a13"
+        "importedFrom" : "86dea3b0-33fb-44f5-9fb2-bb994ac0e7bb"
       },
       "children" : [ {
         "entity" : {
           "type" : "Request",
-          "id" : "b4c39269-4ad0-4b62-b367-b1b2b1042759",
+          "id" : "2bb10e27-b7fe-4fa3-b5e5-fdcb858f120f",
           "name" : "Get by Customer ID",
           "description" : "Get Customer using the Customer ID",
           "uri" : {
@@ -235,7 +235,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "32cbae0c-5d0f-49d2-825c-c2d8c6134467",
+          "id" : "04334aaf-7036-4dec-ae9f-1bc1a877e679",
           "name" : "Delete Customer",
           "description" : "Delete the Customer by ID",
           "uri" : {
@@ -252,7 +252,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "08f93165-b0b9-4648-8e6c-aae1f991c181",
+          "id" : "c6b6731f-a5e4-41af-9687-690affc946c7",
           "name" : "Get Customers",
           "description" : "Operacion que permite obtener la lista de clientes",
           "uri" : {
@@ -261,16 +261,16 @@ api-tryin: |-
             "query" : {
               "delimiter" : "&",
               "items" : [ {
+                "name" : "lastName",
+                "value" : "Jones",
+                "enabled" : false
+              }, {
                 "name" : "entryTerm",
                 "value" : "201801",
                 "enabled" : false
               }, {
                 "name" : "applicantStatus",
                 "value" : "accepted",
-                "enabled" : false
-              }, {
-                "name" : "lastName",
-                "value" : "Jones",
                 "enabled" : false
               }, {
                 "name" : "firstName",
@@ -294,7 +294,7 @@ api-tryin: |-
       }, {
         "entity" : {
           "type" : "Request",
-          "id" : "5137ae77-df48-4060-8ba3-bfede7e25a2e",
+          "id" : "1a372998-63c7-4700-a580-56dc1b871453",
           "name" : "Add a new Customer",
           "uri" : {
             "host" : "${\"BaseUrl\"}",
@@ -321,10 +321,10 @@ api-tryin: |-
     "environments" : [ {
       "name" : "KJB - Customer API 1.0.0",
       "importedFrom" : {
-        "projectId" : "d3a99601-64c6-4884-b03b-9df96c358a13"
+        "projectId" : "86dea3b0-33fb-44f5-9fb2-bb994ac0e7bb"
       },
       "variables" : {
-        "8c22dfd3-e84b-490e-9351-3b3a7ce732ca" : {
+        "4ea2b84a-29c7-4121-84e8-dd8f076150ec" : {
           "name" : "BaseUrl",
           "value" : "http://localhost:8042/services/customer-api",
           "enabled" : true,
