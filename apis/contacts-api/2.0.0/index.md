@@ -16,58 +16,58 @@ api-definition:
     sections:
     - name: "General"
       elementOrder:
-      - "#/contract/texts/2739d471-ac9c-4d7d-8dc9-8e83c6642ef8"
-      - "#/contract/texts/689c9d6f-6b08-43c5-aa5c-eefc6bdcc73c"
-      - "#/contract/types/13c3033c-c151-461b-9336-b1b909f9466e"
+      - "#/contract/texts/364c2342-b829-485b-a5bd-1ee9e8b17d03"
+      - "#/contract/texts/f95e20a7-cc50-4785-ae80-165ca0d56b3a"
+      - "#/contract/types/44d46f38-664d-476a-8ea1-ea8d83cfab2c"
     - name: "Contacts"
       elementOrder:
-      - "#/contract/resources/bfea18b6-e697-4817-8309-b8ddbb407d25"
-      - "#/contract/resources/f32f1556-a51c-4da2-93af-cceb70aac37a"
-      - "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+      - "#/contract/resources/be7aa06e-5e22-48b0-9048-7aac22ff377e"
+      - "#/contract/resources/ee3ccc0f-3cda-4754-ac58-73163a8bf532"
+      - "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
     - name: "Companies"
       elementOrder:
-      - "#/contract/resources/1b6d441c-a543-4b69-9841-62df65868f5c"
-      - "#/contract/resources/5e175883-32f8-475f-b362-f43f60a7e220"
-      - "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+      - "#/contract/resources/3a84910a-ca78-428d-b7ff-25fcffc75b49"
+      - "#/contract/resources/19b5343d-d3a2-4e4b-86e4-391f2966b948"
+      - "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
     securitySchemes:
-      "82f5cc2c-aa44-4736-b9f2-a966ebed24db":
+      "8948e1b0-de19-487e-bd1e-c272a236b267":
         name: "HTTP_BASIC"
         type: "basic"
         description: "All GET methods are public, meaning that *you can read all the data*. Write operations require authentication and therefore are forbidden to the general public."
         describedBy: {}
     resources:
-      "1b6d441c-a543-4b69-9841-62df65868f5c":
+      "3a84910a-ca78-428d-b7ff-25fcffc75b49":
         path: "/companies/"
-        section: "#/contract/sections/6de5fdef-a4af-4095-b7db-566612a920cf"
+        section: "#/contract/sections/d99ce30d-197b-4b4e-99fb-6fa803d78c21"
         operations:
-          c4c0204e-f141-45d3-a85e-07b2987769a1:
+          "35002bf8-b8f8-4b2d-b08c-32416ed7a739":
             name: "Load the list of Companies"
             method: "GET"
             description: "Loads a list of Company."
             tags:
             - "Companies"
             queryParameters:
-            - type: "#/components/queryParameters/861a8c2d-0bcc-4dc5-8077-5679afc315f2"
-            - type: "#/components/queryParameters/6c4262cb-f308-4155-a006-02685af30a7b"
-            - type: "#/components/queryParameters/70b967df-b22c-47f7-956d-2a20cb0091f6"
+            - type: "#/components/queryParameters/343a97d5-3870-46d0-b5f6-f647907cf10d"
+            - type: "#/components/queryParameters/acb5ba96-9238-4c9b-807d-f5661deb4baf"
+            - type: "#/components/queryParameters/8ef04c15-4c18-4f78-aac0-75ce81b87f8a"
             - name: "name"
               type: "STRING"
               description: "Allows to filter the collection of results by the value of field `name`"
               examples:
               - value: "George Street Brewery"
             responses:
-              "54fd93f3-c364-4643-bdb4-47d26c692995":
+              dad4029f-988f-4e6e-a98f-8fafec7c04fb:
                 status: "200"
                 description: "Status 200"
                 headers:
-                - type: "#/components/headers/217a0526-d611-4580-9dfc-5263635bfdc4"
-                - type: "#/components/headers/ba95c11c-d9e1-4769-a87b-d126363a2fa6"
-                - type: "#/components/headers/1c9270f0-60b0-44da-98d1-a9b1dd7682bb"
-                - type: "#/components/headers/ea4f7e11-0ab9-408e-b5e6-7a7c654d790c"
+                - type: "#/components/headers/66399869-353d-4f16-9190-c2dd504996f5"
+                - type: "#/components/headers/a3e96163-5f99-4492-9f11-f6d021815504"
+                - type: "#/components/headers/ec640144-11a2-4fe8-9077-abd1bc7d34ef"
+                - type: "#/components/headers/88115c97-1951-4f16-9a40-6564b6ba571d"
                 bodies:
                 - type: "ARRAY"
                   items:
-                    type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+                    type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
                   examples:
                   - value: |-
                       [{
@@ -84,21 +84,21 @@ api-definition:
                           "ale"
                         ]
                       }]
-              d952ca5e-962d-4422-aefa-f44ed12a8064:
+              "37236c73-a5c4-4cf5-acde-b1fc82cbd5cc":
                 status: "400"
                 componentName: "Status 400"
-                reference: "#/components/responses/1fc7d06a-5499-42bc-8d7e-76cb49401661"
-          ca3f4993-a9be-404e-9e96-efc12456b645:
+                reference: "#/components/responses/c02c78ae-759c-450c-8da0-0f5abe356970"
+          c4c264f7-a7fa-4a56-b6b5-0a0d7895fbdc:
             name: "Create a new Company"
             method: "POST"
             description: "Adds a Company."
             tags:
             - "Companies"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             bodies:
-            - type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+            - type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
               examples:
               - value: |-
                   {
@@ -115,11 +115,11 @@ api-definition:
                     ]
                   }
             responses:
-              f4ebed3a-f3aa-432e-b8ea-bcba6088dd61:
+              "70a99330-0a76-416e-af26-864570652d30":
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+                - type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
                   examples:
                   - value: |-
                       {
@@ -136,24 +136,24 @@ api-definition:
                           "ale"
                         ]
                       }
-      "5e175883-32f8-475f-b362-f43f60a7e220":
+      "19b5343d-d3a2-4e4b-86e4-391f2966b948":
         path: "/companies/{companyid}"
-        section: "#/contract/sections/6de5fdef-a4af-4095-b7db-566612a920cf"
+        section: "#/contract/sections/d99ce30d-197b-4b4e-99fb-6fa803d78c21"
         pathVariables:
-        - type: "#/components/pathVariables/7c48e52f-0fff-462e-8b03-4bef379f9646"
+        - type: "#/components/pathVariables/93d46685-af4a-492c-87c6-a5b155f97c7a"
         operations:
-          fa2fe36a-ca93-4614-94b8-4454fcb98449:
+          af53c32e-218d-4d7d-b29a-6d29ebd3669d:
             name: "Load a Company"
             method: "GET"
             description: "Loads a Company."
             tags:
             - "Companies"
             responses:
-              "7facf2ab-d84f-43de-8e57-a58445305b4a":
+              eb9557ca-3896-4677-80d5-d19fa0615d44:
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+                - type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
                   examples:
                   - value: |-
                       {
@@ -170,21 +170,21 @@ api-definition:
                           "ale"
                         ]
                       }
-              bc584320-c4dd-4123-906a-4ce56106cd20:
+              "64f04647-d611-443a-8800-50677baebcb6":
                 status: "400"
                 componentName: "Status 400"
-                reference: "#/components/responses/1fc7d06a-5499-42bc-8d7e-76cb49401661"
-          "007ddd8f-be8f-4b20-a934-9bc06a61935c":
+                reference: "#/components/responses/c02c78ae-759c-450c-8da0-0f5abe356970"
+          "6675ed5a-57f0-463a-8b03-cae807aedd81":
             name: "Update a Company"
             method: "PUT"
             description: "Updates a Company."
             tags:
             - "Companies"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             bodies:
-            - type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+            - type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
               examples:
               - value: |-
                   {
@@ -201,11 +201,11 @@ api-definition:
                     ]
                   }
             responses:
-              "0315c373-1d4c-48a7-a132-2ebe89f76b3c":
+              "64a8326e-dba8-4a14-bae7-a70d55cbf7aa":
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/4fd1989a-91a8-4ebb-b179-0490b2567228"
+                - type: "#/contract/types/61c439e2-e0b4-4236-99f5-fcd62c915107"
                   examples:
                   - value: |-
                       {
@@ -222,33 +222,33 @@ api-definition:
                           "ale"
                         ]
                       }
-          "028b414f-a0b1-4636-b931-349fdc749010":
+          d879d187-48c8-4286-b11c-968eb381659f:
             name: "Delete a Company"
             method: "DELETE"
             description: "Deletes a Company."
             tags:
             - "Companies"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             responses:
-              "584e91ca-9cc0-41dd-8860-11f8dadd8b71":
+              e1f19250-7114-4abd-9ca9-0a8833bf2566:
                 status: "200"
                 description: "Status 200"
-      bfea18b6-e697-4817-8309-b8ddbb407d25:
+      be7aa06e-5e22-48b0-9048-7aac22ff377e:
         path: "/contacts/"
-        section: "#/contract/sections/2f9e309d-4f9f-40ad-99a8-7aa43bd79b99"
+        section: "#/contract/sections/7126834d-18cc-40bc-87c8-fe12a240213e"
         operations:
-          "86677e26-d774-477a-a7ac-3dbf9237e2aa":
+          cc629628-40d4-4bfb-9a66-ff6b48b45e7e:
             name: "Get the list of Contacts"
             method: "GET"
             description: "Loads a list of Contacts."
             tags:
             - "Contacts"
             queryParameters:
-            - type: "#/components/queryParameters/861a8c2d-0bcc-4dc5-8077-5679afc315f2"
-            - type: "#/components/queryParameters/6c4262cb-f308-4155-a006-02685af30a7b"
-            - type: "#/components/queryParameters/70b967df-b22c-47f7-956d-2a20cb0091f6"
+            - type: "#/components/queryParameters/343a97d5-3870-46d0-b5f6-f647907cf10d"
+            - type: "#/components/queryParameters/acb5ba96-9238-4c9b-807d-f5661deb4baf"
+            - type: "#/components/queryParameters/8ef04c15-4c18-4f78-aac0-75ce81b87f8a"
             - name: "firstName"
               type: "STRING"
               description: "Allows to filter the collection of results by the value of field `firstName`"
@@ -271,18 +271,18 @@ api-definition:
               examples:
               - value: "0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f"
             responses:
-              f6f00fd5-77c1-490a-a408-f1c2f333d409:
+              "96d67be5-646f-45a4-a508-9d59c608e3b2":
                 status: "200"
                 description: "Status 200"
                 headers:
-                - type: "#/components/headers/217a0526-d611-4580-9dfc-5263635bfdc4"
-                - type: "#/components/headers/ba95c11c-d9e1-4769-a87b-d126363a2fa6"
-                - type: "#/components/headers/1c9270f0-60b0-44da-98d1-a9b1dd7682bb"
-                - type: "#/components/headers/ea4f7e11-0ab9-408e-b5e6-7a7c654d790c"
+                - type: "#/components/headers/66399869-353d-4f16-9190-c2dd504996f5"
+                - type: "#/components/headers/a3e96163-5f99-4492-9f11-f6d021815504"
+                - type: "#/components/headers/ec640144-11a2-4fe8-9077-abd1bc7d34ef"
+                - type: "#/components/headers/88115c97-1951-4f16-9a40-6564b6ba571d"
                 bodies:
                 - type: "ARRAY"
                   items:
-                    type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+                    type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
                   examples:
                   - value: |-
                       [{
@@ -294,21 +294,21 @@ api-definition:
                         "rank": 1,
                         "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                       }]
-              "7df7e193-4b8d-41bb-abcc-f303c4972602":
+              "3480ee1a-d7f8-48cd-91a3-fe4581df15a8":
                 status: "400"
                 componentName: "Status 400"
-                reference: "#/components/responses/1fc7d06a-5499-42bc-8d7e-76cb49401661"
-          f99949c2-4106-4f71-b659-84ad581cb5cc:
+                reference: "#/components/responses/c02c78ae-759c-450c-8da0-0f5abe356970"
+          "81279661-0296-403b-9d85-90dde28dde89":
             name: "Create a Contact"
             method: "POST"
             description: "Adds a Contact."
             tags:
             - "Contacts"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             bodies:
-            - type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+            - type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
               examples:
               - value: |-
                   {
@@ -320,11 +320,11 @@ api-definition:
                     "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                   }
             responses:
-              "583fd4f3-6584-4854-b624-9353c44a428c":
+              "6323d199-1b67-46a0-825c-a6c2f638d1de":
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+                - type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
                   examples:
                   - value: |-
                       {
@@ -336,24 +336,24 @@ api-definition:
                         "rank": 1,
                         "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                       }
-      f32f1556-a51c-4da2-93af-cceb70aac37a:
+      ee3ccc0f-3cda-4754-ac58-73163a8bf532:
         path: "/contacts/{contactid}"
-        section: "#/contract/sections/2f9e309d-4f9f-40ad-99a8-7aa43bd79b99"
+        section: "#/contract/sections/7126834d-18cc-40bc-87c8-fe12a240213e"
         pathVariables:
-        - type: "#/components/pathVariables/ca2b378c-f0b6-4962-9f20-7594fecf7506"
+        - type: "#/components/pathVariables/0d094acb-f51d-44ff-8062-077d2678a342"
         operations:
-          bd46abc2-5031-48d5-b48e-fec10e83b0f8:
+          aa4296c1-9992-4ade-a8a2-9b19ff94c2a9:
             name: "Load a Contact"
             method: "GET"
             description: "Loads a Contact."
             tags:
             - "Contacts"
             responses:
-              "59117308-9604-4a5e-9dc0-ecb4d54d6fa5":
+              "81f5cf74-1842-4977-adac-76c10c39f6a4":
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+                - type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
                   examples:
                   - value: |-
                       {
@@ -365,21 +365,21 @@ api-definition:
                         "rank": 1,
                         "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                       }
-              a799c5c7-e270-454d-9368-81d3a60127ac:
+              "5b0ac473-d06c-4141-8f36-caefb441ec08":
                 status: "400"
                 componentName: "Status 400"
-                reference: "#/components/responses/1fc7d06a-5499-42bc-8d7e-76cb49401661"
-          "1db01d70-278d-4595-ae49-5697ca3c443d":
+                reference: "#/components/responses/c02c78ae-759c-450c-8da0-0f5abe356970"
+          b0d32bd1-880c-4425-965d-5b741428175b:
             name: "Update a Contact"
             method: "PUT"
             description: "Updates a Contact."
             tags:
             - "Contacts"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             bodies:
-            - type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+            - type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
               examples:
               - value: |-
                   {
@@ -391,11 +391,11 @@ api-definition:
                     "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                   }
             responses:
-              f9b7fdf7-2176-4c3e-93fa-f45d1951c418:
+              f0b633a0-700a-4c25-9cce-b8114ec659e3:
                 status: "200"
                 description: "Status 200"
                 bodies:
-                - type: "#/contract/types/c4830643-01e0-4ff8-9ef8-a406b8684f99"
+                - type: "#/contract/types/1a064cf2-7e06-4318-896b-6f19aff83e2c"
                   examples:
                   - value: |-
                       {
@@ -407,25 +407,25 @@ api-definition:
                         "rank": 1,
                         "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
                       }
-          d4f98c0e-e259-43e0-ad05-f40da9e8476e:
+          b4b24e5e-1eda-409e-896c-fd9a44430075:
             name: "Delete a Contact"
             method: "DELETE"
             description: "Deletes a Contact."
             tags:
             - "Contacts"
             securedBy:
-            - scheme: "#/contract/securitySchemes/82f5cc2c-aa44-4736-b9f2-a966ebed24db"
+            - scheme: "#/contract/securitySchemes/8948e1b0-de19-487e-bd1e-c272a236b267"
               scopes: []
             responses:
-              "690915fb-cbb8-43b9-ae54-8c2621adddcb":
+              "7b21f073-49c1-483a-99e0-5e5011ec89ba":
                 status: "200"
                 description: "Status 200"
     types:
-      "4fd1989a-91a8-4ebb-b179-0490b2567228":
+      "61c439e2-e0b4-4236-99f5-fcd62c915107":
         name: "Company"
         type: "OBJECT"
         description: "The datatype of a Company"
-        section: "#/contract/sections/6de5fdef-a4af-4095-b7db-566612a920cf"
+        section: "#/contract/sections/d99ce30d-197b-4b4e-99fb-6fa803d78c21"
         properties:
         - name: "id"
           type: "STRING"
@@ -471,11 +471,11 @@ api-definition:
                 "ale"
               ]
             }
-      c4830643-01e0-4ff8-9ef8-a406b8684f99:
+      "1a064cf2-7e06-4318-896b-6f19aff83e2c":
         name: "Contact"
         type: "OBJECT"
         description: "The datatype of a Contact"
-        section: "#/contract/sections/2f9e309d-4f9f-40ad-99a8-7aa43bd79b99"
+        section: "#/contract/sections/7126834d-18cc-40bc-87c8-fe12a240213e"
         properties:
         - name: "id"
           type: "STRING"
@@ -527,11 +527,11 @@ api-definition:
               "rank": 1,
               "company": "0e8cedd0-ad98-11e6-bf2e-47644ada7c0f"
             }
-      "13c3033c-c151-461b-9336-b1b909f9466e":
+      "44d46f38-664d-476a-8ea1-ea8d83cfab2c":
         name: "Error"
         type: "OBJECT"
         description: "This general error structure is used throughout this API."
-        section: "#/contract/sections/c62597e4-1637-4990-ab01-4e10b7f803ce"
+        section: "#/contract/sections/1a36893d-2974-4bf6-a346-be9e7d238ef1"
         properties:
         - name: "code"
           type: "INTEGER"
@@ -551,14 +551,14 @@ api-definition:
         examples:
         - value: "{\"code\": 400, \"description\": \"Bad query parameter [$size]: Invalid integer value [abc]\", \"reasonPhrase\": \"Bad Request\"}"
     texts:
-      "2739d471-ac9c-4d7d-8dc9-8e83c6642ef8":
+      "364c2342-b829-485b-a5bd-1ee9e8b17d03":
         title: "Authentication"
         content: |-
           This API is secured using Basic Authentication.
 
           All **read operations are open** and don't require authentication. However, all **write operations require authentication**.
-        section: "#/contract/sections/c62597e4-1637-4990-ab01-4e10b7f803ce"
-      "689c9d6f-6b08-43c5-aa5c-eefc6bdcc73c":
+        section: "#/contract/sections/1a36893d-2974-4bf6-a346-be9e7d238ef1"
+      f95e20a7-cc50-4785-ae80-165ca0d56b3a:
         title: "Error handling"
         content: |-
           This API uses standard HTTP status codes to indicate the status of a response.
@@ -591,10 +591,10 @@ api-definition:
           | Name | Code | Description |
           | -------- | -------- | -------- |
           | Unprocessable entity     | 422     | The server understands the content type of the request entity, which has a correct syntax, but failed to process the contained instructions.     |
-        section: "#/contract/sections/c62597e4-1637-4990-ab01-4e10b7f803ce"
+        section: "#/contract/sections/1a36893d-2974-4bf6-a346-be9e7d238ef1"
   components:
     pathVariables:
-      ca2b378c-f0b6-4962-9f20-7594fecf7506:
+      "0d094acb-f51d-44ff-8062-077d2678a342":
         name: "contactid"
         componentName: "contactid"
         type: "STRING"
@@ -602,7 +602,7 @@ api-definition:
         required: true
         examples:
         - value: "0e8dd830-ad98-11e6-bf2e-47644ada7c0f"
-      "7c48e52f-0fff-462e-8b03-4bef379f9646":
+      "93d46685-af4a-492c-87c6-a5b155f97c7a":
         name: "companyid"
         componentName: "companyid"
         type: "STRING"
@@ -611,14 +611,14 @@ api-definition:
         examples:
         - value: "0e8c9fb0-ad98-11e6-bf2e-47644ada7c0f"
     queryParameters:
-      "861a8c2d-0bcc-4dc5-8077-5679afc315f2":
+      "343a97d5-3870-46d0-b5f6-f647907cf10d":
         name: "$size"
         componentName: "$size"
         type: "INTEGER"
         description: "Size of the page to retrieve."
         examples:
         - value: 10
-      "6c4262cb-f308-4155-a006-02685af30a7b":
+      acb5ba96-9238-4c9b-807d-f5661deb4baf:
         name: "$page"
         componentName: "$page"
         type: "INTEGER"
@@ -626,7 +626,7 @@ api-definition:
         examples:
         - value: 1
         - value: 42
-      "70b967df-b22c-47f7-956d-2a20cb0091f6":
+      "8ef04c15-4c18-4f78-aac0-75ce81b87f8a":
         name: "$sort"
         componentName: "$sort"
         type: "STRING"
@@ -635,36 +635,36 @@ api-definition:
         - value: "birthday DESC"
         - value: "birthday ASC,rank DESC"
     headers:
-      "217a0526-d611-4580-9dfc-5263635bfdc4":
+      "66399869-353d-4f16-9190-c2dd504996f5":
         name: "X-Page-Count"
         componentName: "X-Page-Count"
         type: "INTEGER"
         examples:
         - value: 1
-      ba95c11c-d9e1-4769-a87b-d126363a2fa6:
+      a3e96163-5f99-4492-9f11-f6d021815504:
         name: "X-Page-Number"
         componentName: "X-Page-Number"
         type: "INTEGER"
         examples:
         - value: 1
-      "1c9270f0-60b0-44da-98d1-a9b1dd7682bb":
+      ec640144-11a2-4fe8-9077-abd1bc7d34ef:
         name: "X-Page-Size"
         componentName: "X-Page-Size"
         type: "INTEGER"
         examples:
         - value: 25
-      ea4f7e11-0ab9-408e-b5e6-7a7c654d790c:
+      "88115c97-1951-4f16-9a40-6564b6ba571d":
         name: "X-Total-Count"
         componentName: "X-Total-Count"
         type: "INTEGER"
         examples:
         - value: 2
     responses:
-      "1fc7d06a-5499-42bc-8d7e-76cb49401661":
+      c02c78ae-759c-450c-8da0-0f5abe356970:
         status: "400"
         componentName: "Status 400"
         bodies:
-        - type: "#/contract/types/13c3033c-c151-461b-9336-b1b909f9466e"
+        - type: "#/contract/types/44d46f38-664d-476a-8ea1-ea8d83cfab2c"
           mediaTypes:
           - "application/json"
 api-tryin: |-
@@ -675,7 +675,7 @@ api-tryin: |-
         "type" : "Project",
         "name" : "Contacts API 2.0.0",
         "description" : "An API for keeping track of your contacts and the companies they work for.",
-        "importedFrom" : "f4795885-eb56-4edb-9e1a-c3219e0e883a"
+        "importedFrom" : "76702a41-e6dc-4a4e-9382-51bcbac3a4dc"
       },
       "children" : [ {
         "entity" : {
@@ -690,7 +690,7 @@ api-tryin: |-
         "children" : [ {
           "entity" : {
             "type" : "Request",
-            "id" : "86677e26-d774-477a-a7ac-3dbf9237e2aa",
+            "id" : "cc629628-40d4-4bfb-9a66-ff6b48b45e7e",
             "name" : "Get the list of Contacts",
             "description" : "Loads a list of Contacts.",
             "uri" : {
@@ -744,7 +744,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "f99949c2-4106-4f71-b659-84ad581cb5cc",
+            "id" : "81279661-0296-403b-9d85-90dde28dde89",
             "name" : "Create a Contact",
             "description" : "Adds a Contact.",
             "uri" : {
@@ -774,7 +774,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "bd46abc2-5031-48d5-b48e-fec10e83b0f8",
+            "id" : "aa4296c1-9992-4ade-a8a2-9b19ff94c2a9",
             "name" : "Load a Contact",
             "description" : "Loads a Contact.",
             "uri" : {
@@ -795,7 +795,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "1db01d70-278d-4595-ae49-5697ca3c443d",
+            "id" : "b0d32bd1-880c-4425-965d-5b741428175b",
             "name" : "Update a Contact",
             "description" : "Updates a Contact.",
             "uri" : {
@@ -825,7 +825,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "d4f98c0e-e259-43e0-ad05-f40da9e8476e",
+            "id" : "b4b24e5e-1eda-409e-896c-fd9a44430075",
             "name" : "Delete a Contact",
             "description" : "Deletes a Contact.",
             "uri" : {
@@ -848,7 +848,7 @@ api-tryin: |-
         "children" : [ {
           "entity" : {
             "type" : "Request",
-            "id" : "c4c0204e-f141-45d3-a85e-07b2987769a1",
+            "id" : "35002bf8-b8f8-4b2d-b08c-32416ed7a739",
             "name" : "Load the list of Companies",
             "description" : "Loads a list of Company.",
             "uri" : {
@@ -890,7 +890,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "ca3f4993-a9be-404e-9e96-efc12456b645",
+            "id" : "c4c264f7-a7fa-4a56-b6b5-0a0d7895fbdc",
             "name" : "Create a new Company",
             "description" : "Adds a Company.",
             "uri" : {
@@ -920,7 +920,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "fa2fe36a-ca93-4614-94b8-4454fcb98449",
+            "id" : "af53c32e-218d-4d7d-b29a-6d29ebd3669d",
             "name" : "Load a Company",
             "description" : "Loads a Company.",
             "uri" : {
@@ -941,7 +941,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "007ddd8f-be8f-4b20-a934-9bc06a61935c",
+            "id" : "6675ed5a-57f0-463a-8b03-cae807aedd81",
             "name" : "Update a Company",
             "description" : "Updates a Company.",
             "uri" : {
@@ -971,7 +971,7 @@ api-tryin: |-
         }, {
           "entity" : {
             "type" : "Request",
-            "id" : "028b414f-a0b1-4636-b931-349fdc749010",
+            "id" : "d879d187-48c8-4286-b11c-968eb381659f",
             "name" : "Delete a Company",
             "description" : "Deletes a Company.",
             "uri" : {
@@ -991,10 +991,10 @@ api-tryin: |-
     "environments" : [ {
       "name" : "Contacts API 2.0.0",
       "importedFrom" : {
-        "projectId" : "f4795885-eb56-4edb-9e1a-c3219e0e883a"
+        "projectId" : "76702a41-e6dc-4a4e-9382-51bcbac3a4dc"
       },
       "variables" : {
-        "83eff6e2-a182-4b26-a039-80f86d5ec243" : {
+        "1b11ae17-3e65-4cf4-b2a4-2624a8eeeac2" : {
           "name" : "BaseUrl",
           "value" : "https://example.com",
           "enabled" : true,
